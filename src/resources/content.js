@@ -66,7 +66,7 @@ const home = {
 const about = {
   path: "/about",
   label: "About Us",
-  title: "About Us – DFA UCLA",
+  title: "About Us",
   description: "Learn about the Design for America chapter at UCLA and our mission to solve social issues through design",
   tableOfContent: {
     display: true,

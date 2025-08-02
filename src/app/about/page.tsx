@@ -51,9 +51,10 @@ export default function About() {
           {about.title}
         </Heading>
         <Text 
-          wrap="balance" 
+          wrap="balance"
           onBackground="neutral-weak" 
           variant="body-default-l"
+          style={{ textAlign: 'center' }}
         >
           {about.description}
         </Text>
@@ -155,6 +156,7 @@ export default function About() {
         <Text 
           variant="body-default-m" 
           onBackground="neutral-weak"
+          style={{ textAlign: 'center' }}
         >
           {about.contact.description}
         </Text>

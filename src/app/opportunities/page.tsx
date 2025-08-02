@@ -38,6 +38,7 @@ export default function Opportunities() {
           wrap="balance" 
           onBackground="neutral-weak" 
           variant="body-default-l"
+          style={{ textAlign: 'center' }}
         >
           {opportunities.description}
         </Text>
