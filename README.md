@@ -76,4 +76,4 @@ See `LICENSE.txt` for more information.
 
 # **Deployment**
 
-This website is deployed and maintained by the DFA @ UCLA web team. For deployment-related questions or issues, please contact the team leads.
+This website is deployed on Vercel and maintained by the DFA @ UCLA web team. For deployment-related questions or issues, please contact the team leads.
