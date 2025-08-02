@@ -2,14 +2,14 @@ import { Logo } from "@once-ui-system/core";
 
 const person = {
   firstName: "DFA",
-  lastName: "UCLA",
+  lastName: "@ UCLA",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
   role: "Design for America Chapter",
-  avatar: "/images/avatar.jpg",
-  email: "dfaucla@gmail.com",
-  location: "America/Los_Angeles", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  avatar: "/assets/logos/dfa-ucla-logo.png",
+  email: "ucla@designforamerica.com",
+  location: "America/Los_Angeles", 
   languages: ["English"], // optional: Leave the array empty if you don't want to display languages
 };
 
