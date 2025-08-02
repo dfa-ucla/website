@@ -1,9 +1,8 @@
 import React from "react";
 
-import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, Meta, Schema } from "@once-ui-system/core";
+import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, Meta, Schema, Media } from "@once-ui-system/core";
 import { home, about, person, newsletter, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
-import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
 
 export default function Home() {
@@ -24,14 +23,22 @@ export default function Home() {
       />
       <Column fillWidth paddingY="24" gap="m">
         <Column maxWidth="s">
-          {home.featured.display && (
+          {/* {home.featured.display && (
           <RevealFx fillWidth horizontal="start" paddingTop="16" paddingBottom="32" paddingLeft="12">
             <Badge background="brand-alpha-weak" paddingX="12" paddingY="4" onBackground="neutral-strong" textVariant="label-default-s" arrow={false}
               href={home.featured.href}>
               <Row paddingY="2">{home.featured.title}</Row>
             </Badge>
           </RevealFx>
-          )}
+          )} */}
+          <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="32">
+            <Media
+              src="/assets/logos/dfa-ucla-logo.png"
+              alt="DFA UCLA Logo"
+              width={8}
+              height={8}
+            />
+          </RevealFx>
           <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="16">
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
@@ -53,23 +60,12 @@ export default function Home() {
               arrowIcon
             >
               <Flex gap="8" vertical="center" paddingRight="4">
-                {about.avatar.display && (
-                  <Avatar
-                    marginRight="8"
-                    style={{ marginLeft: "-0.75rem" }}
-                    src={person.avatar}
-                    size="m"
-                  />
-                )}
                 {about.title}
               </Flex>
             </Button>
           </RevealFx>
         </Column>
       </Column>
-      <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} />
-      </RevealFx>
       {routes["/blog"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
           <Flex flex={1} paddingLeft="l" paddingTop="24">
@@ -82,8 +78,17 @@ export default function Home() {
           </Flex>
         </Flex>
       )}
-      <Projects range={[2]} />
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
   );
+}
+
+export async function generateMetadata() {
+  return Meta.generate({
+    title: home.title,
+    description: home.description,
+    baseURL: baseURL,
+    path: home.path,
+    image: home.image,
+  });
 }

@@ -1,20 +1,20 @@
 import { Logo } from "@once-ui-system/core";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "DFA",
+  lastName: "UCLA",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Design for America Chapter",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "dfaucla@gmail.com",
+  location: "America/Los_Angeles", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
@@ -30,17 +30,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/dfaucla",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/company/dfaucla/",
   },
   {
     name: "Email",
@@ -53,27 +48,26 @@ const home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  title: "DFA UCLA",
+  description: "Design for America at UCLA - Building community through human-centered design",
+  headline: <>Building community through human-centered design</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>Latest from our blog</>,
+    href: "/blog",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      We're a student-led organization at UCLA working to solve pressing social issues through design thinking and community engagement.
     </>
   ),
 };
 
 const about = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "About Us",
+  title: "About Us – DFA UCLA",
+  description: "Learn about the Design for America chapter at UCLA and our mission to solve social issues through design",
   tableOfContent: {
     display: true,
     subItems: false,
@@ -87,120 +81,53 @@ const about = {
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Our Chapter",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        DFA UCLA is a student-led organization that leverages human-centered design to tackle pressing social issues in our local community and beyond. We bring together students from diverse backgrounds to collaborate on projects that create meaningful impact.
       </>
     ),
+    sections: [
+      {
+        title: "Why We Exist",
+        content: "Too often, well-intentioned solutions miss the mark because creators jump straight to implementation without deeply understanding the problems they're trying to solve. Founded in May 2025, DFA UCLA emerged to change this pattern. By partnering with Design for America National, we bring time-tested design methodologies to UCLA, ensuring our interventions are both thoughtful and effective."
+      },
+      {
+        title: "How We Work",
+        content: "We're building a collaborative ecosystem across campus, partnering with student organizations to leverage each group's unique expertise. Whether it's working with engineering students on accessible technology solutions or partnering with policy groups on systemic change initiatives, we believe the most impactful solutions emerge when different perspectives unite around shared challenges."
+      },
+      {
+        title: "Who We're Looking For",
+        content: "We're currently seeking students passionate about design thinking, community organizations with challenges to tackle, and campus groups interested in collaborative problem-solving."
+      }
+    ],
+  },
+  contact: {
+    title: "Get Involved",
+    description: "Ready to turn your passion into impact? Join us in designing solutions that truly serve our community.",
   },
   work: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Work Experience",
-    experiences: [
-      {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
-        achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
-    ],
+    experiences: [],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Studies",
-    institutions: [
-      {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
-    ],
+    institutions: [],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Technical skills",
-    skills: [
-      {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-    ],
+    skills: [],
   },
 };
 
 const blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  title: "Latest Updates from DFA UCLA",
+  description: "Read about our projects, events, and insights from the DFA UCLA community",
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
@@ -265,4 +192,52 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+const opportunities = {
+  path: "/opportunities",
+  label: "Opportunities",
+  title: "Join DFA UCLA",
+  description: "Discover opportunities to get involved with DFA UCLA and make an impact through design",
+  opportunities: [
+    // Empty for now - will show "coming soon" message
+    // When adding opportunities, use this structure:
+    // {
+    //   title: "Role Title",
+    //   description: "Role description",
+    //   requirements: ["Requirement 1", "Requirement 2"],
+    //   timeCommitment: "X hours per week",
+    // }
+  ],
+  applicationLink: "https://forms.gle/XYZ",
+};
+
+const team = {
+  title: "Our Team",
+  members: [
+    {
+      name: "Jakob Jensen",
+      role: "Studio Lead / Co-Founder",
+      bio: "B.A. Business Economics '26",
+      image: "/images/team/jakob-jensen.jpeg",
+      linkedin: "https://www.linkedin.com/in/jakob-jensen-jb12/",
+      email: "jakobjensen.b@gmail.com",
+    },
+    {
+      name: "Yash Goyal",
+      role: "Studio Lead / Co-Founder",
+      bio: "B.S. Computer Science '26",
+      image: "/images/team/yash-goyal.jpeg",
+      linkedin: "https://www.linkedin.com/in/yashgoyal01/",
+      email: "yashgoyal@ucla.edu",
+    },
+    {
+      name: "Morgan Taylor-Cohen",
+      role: "Alumni Director / Co-Founder",
+      bio: "B.A. Business Economics & Psychology '25",
+      image: "/images/team/morgan-taylor-cohen.jpeg",
+      linkedin: "https://www.linkedin.com/in/morgantc/",
+      email: "1morgantc@gmail.com",
+    },
+  ],
+};
+
+export { person, social, newsletter, home, about, blog, work, gallery, opportunities, team };
